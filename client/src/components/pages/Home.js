@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Filter from "./Filter";
+import Filter from "../Filter";
 
 const Home = () => {
   const [state, setState] = useState({ customers: [] });

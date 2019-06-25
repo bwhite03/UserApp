@@ -51,7 +51,6 @@ app.post("/post", (req, res) => {
   db.query(sql, [name, email], (err, result) => {
     if (err) throw err;
   });
-  res.end();
 });
 
 // Update users

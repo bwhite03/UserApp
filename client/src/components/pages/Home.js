@@ -31,12 +31,12 @@ const Home = () => {
 
   // Sort data by names
 
-  if (filter.filter === "ascending") {
-    state.customers.sort((a, b) => a.name.localeCompare(b.name));
-  }
-  if (filter.filter === "descending") {
-    state.customers.sort((a, b) => b.name.localeCompare(a.name));
-  }
+  // if (filter.filter === "ascending") {
+  //   state.customers.sort((a, b) => a.name.localeCompare(b.name));
+  // }
+  // if (filter.filter === "descending") {
+  //   state.customers.sort((a, b) => b.name.localeCompare(a.name));
+  // }
 
   return (
     <div className="container">

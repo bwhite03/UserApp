@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client")));
 
 // Create Connection
 const db = mysql.createConnection({

@@ -65,6 +65,7 @@ app.post("/api/update/:id", (req, res) => {
   db.query(sql, [names, emails], (err, result) => {
     if (err) throw err;
   });
+  res.end();
 });
 
 // Deleting users

@@ -11,7 +11,6 @@ const Home = () => {
   const fetchData = () => {
     axios.get("/api/users").then(res => {
       const customers = res.data;
-      console.log(customers);
       setState({ customers });
     });
   };

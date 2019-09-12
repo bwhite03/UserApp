@@ -9,19 +9,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "index.html"));
   });
 }
 
 // Create Connection
 const db = mysql.createConnection({
   host: "us-cdbr-iron-east-02.cleardb.net",
-  user: "bf19b7075f62c8",
-  password: "be9e8d90",
-  database: "heroku_0d5b2d5477247d9"
+  user: "b212718faef918",
+  password: "a8a7ce29",
+  database: "heroku_fb56f2ac7737319"
 });
 
 // Connect

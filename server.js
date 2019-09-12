@@ -8,7 +8,7 @@ const path = require("path");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/static", express.static(path.join(__dirname, "client/build")));
+app.use("/client", express.static(path.join(__dirname, "client/build")));
 
 // Create Connection
 const db = mysql.createConnection({

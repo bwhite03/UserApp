@@ -2,7 +2,6 @@ const mysql = require("mysql");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const config = require("./config");
 
 // Middleware
 app.use(bodyParser.json());
@@ -10,10 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Create Connection
 const db = mysql.createConnection({
-  host: config.host,
-  user: config.user,
-  password: config.password,
-  database: config.database
+  host: "us-cdbr-iron-east-02.cleardb.net",
+  user: "bf19b7075f62c8",
+  password: "be9e8d90",
+  database: "heroku_0d5b2d5477247d9"
 });
 
 // Connect

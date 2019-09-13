@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("client/build"));
 
 // Create Connection
-const db = mysql.createConnection({
+const db = mysql.createPool({
+  connectionLimit: 10,
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b212718faef918",
   password: "a8a7ce29",
@@ -18,7 +19,7 @@ const db = mysql.createConnection({
 });
 
 // Connect
-db.connect(err => {
+db.getConnection(err => {
   if (err) throw err;
   console.log("MySql Connected...");
 });
